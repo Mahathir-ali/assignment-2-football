@@ -66,6 +66,13 @@ h1 {
   font-weight: 500px;
   margin-bottom: 200px;
   margin-left: 156px;
+  transition: ease-out 1s;
+  box-shadow: inset 0 0 0 0 yellow;
+}
+.wtc-button:hover {
+  box-shadow: inset 168px 0 0 0 yellow;
+  cursor: pointer;
+  color: black;
 }
 .header-banner img {
   width: 556px;
@@ -115,7 +122,6 @@ p {
 .photo-frame {
   width: 400px;
   height: 265px;
-  /* border: 2px solid black; */
   position: relative;
 }
 .photo img {
@@ -157,6 +163,7 @@ h3 {
 
 /* last-section */
 
+/* footer */
 footer {
   margin-top: 158px;
   display: grid;
@@ -173,4 +180,53 @@ footer {
   width: 32px;
   height: 32px;
   border-radius: 50%;
+}
+/* footer */
+
+@media only screen and (max-width: 688px) {
+  .container {
+    width: 100%;
+  }
+  header {
+    margin-left: 50px;
+  }
+  h1 {
+    font-size: 36px;
+    margin: 0;
+    margin-left: 20px;
+  }
+  nav {
+    display: none;
+  }
+  .wtc-button {
+    display: block;
+    margin: 0;
+    margin: 20px 0 0 20px;
+  }
+
+  .container,
+  .players,
+  .banner,
+  .player-card,
+  .photo-album,
+  .trophies,
+  .logo {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .header-banner img {
+    width: 329px;
+    height: 259px;
+    margin: 0;
+    display: block;
+  }
+  .player-card {
+    flex-direction: column;
+    margin-left: 100px;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+  }
 }
